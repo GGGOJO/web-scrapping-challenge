@@ -1,6 +1,7 @@
-# web-scrapping-challenge
-activities in web scrapping
+# A Web Scrapping Challenge: The Red Planet
+In this activity, I built a web application that scraped several websites for data on the topic of the "Mission to Mars". The results of this activities were placed in a singlt HTML page. 
 
+The general overview of the work entailed: I used Jupyter Notebook, Pandas, Beautiful Soup and Splinter to write the web scraping code. Then in VS Code, I created two .py files (scrape_mars.py and app.py). The code from Jupyter Notebook was placed in the scrape_mars.py as functions. The app.py uses Flask and MongoDB for extract the data endpoints and store them. Finally, I created a html.index page for the data to be presented using Bootstrap and Bootswatch. Details of the work are described below.
 
 ## Step 1 - Scraping
 
@@ -35,3 +36,5 @@ Use MongoDB with Flask templating to create a new HTML page tha tdisplays all of
 4. Create a root route "/" that will query your Mongo database and pass the mars data into an HTML template to display the data.
 5. Create a template HTML file called index.html that will take the mars data dictionary and display all of the data in the appropriate HTML elements. 
 
+## After thoughts
+This activity was a challenging one because it was three projects placed in one - web scrape, create API, and display in HTML. While familiary with API and HTML because of past challenges, the web scrapping was another layer to get a quick understanding of. I learned that reading Beautiful Soup and Splinter documentation greatly helped. But I would have liked a little more time to play around with their code. This activity was a good introduction to web scraping and its possibilities. I think if I delve into this work more, I should check out Selenium with Python.
