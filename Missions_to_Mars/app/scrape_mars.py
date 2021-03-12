@@ -16,7 +16,7 @@ def scrape_all():
         "news_paragraph": news_paragraph,
         "featured_image": featured_image(browser),
         "facts": mars_facts(),
-        "hemispheres": hemispheres(browser)
+        "hemispheres": hemisphere(browser)
     }
 
     browser.quit()
@@ -37,13 +37,13 @@ def mars_news(browser):
         slide_element = soup.select_one('ul.item_list li.slide')
         news_title = slide_element.find(
             "div", class_='content_title').get_text()
-        news_p = slide_element.find(
+        news_paragraph = slide_element.find(
             "div", class_='article_teaser_body').get_text()
 
     except AttributeError:
         return None, None
 
-    return news_title, news_p
+    return news_title, news_paragraph
 
 
 def featured_image(browser):
@@ -78,7 +78,7 @@ def mars_facts():
     return df.to_html(classes="table table-striped")
 
 
-def hemispheres(browser):
+def hemisphere(browser):
     url = (
         "https://astrogeology.usgs.gov/search/"
         "results?q=hemisphere+enhanced&k1=target&v1=Mars"
