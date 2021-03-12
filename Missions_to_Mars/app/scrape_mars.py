@@ -84,7 +84,7 @@ def hemispheres(browser):
         "results?q=hemisphere+enhanced&k1=target&v1=Mars"
     )
 
-    browser.vist(url)
+    browser.visit(url)
 
     hemisphere_image_urls = []
 
